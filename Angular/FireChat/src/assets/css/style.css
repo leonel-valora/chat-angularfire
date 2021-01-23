@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+p, input, button {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #22223b;
+}
+#chat {
+    width: 318px;
+    height: 550px;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #e5e5e5;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+#new-msg {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 16px;
+    width: inherit;
+    white-space: nowrap;
+}
+#input-msg {
+    width: 69%;
+    background-color: white;
+    overflow-y: scroll;
+}
+#btn-send-msg {
+    width: 29%;
+    background-color: #d62828;
+    color: white;
+}
+#btn-send-msg, #input-msg {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+#chat-title {
+    font-size: 2rem;
+    margin: 16px;
+    color: #22223b;
+}
+#chat-body {
+    overflow-y: scroll;
+    height: 75%;
+}
+.text-emphasis {
+    font-weight: 500;
+    /*color: #03071e;*/
+}
+.msg-received {
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    padding: 4px;
+    border-radius: 8px 8px 8px 0;
+}
+.msg-sent {
+    display: inline-block;
+    border-radius: 8px 8px 0 8px;
+    padding: 4px;
+    background-color: lightcoral;
+}
+.chat-user {
+    margin-bottom: 4px;
+    color: rgb(94, 94, 94);
+    font-size: 12px;
+}
+.msg {
+    margin-bottom: 8px;
+}
+ .msg p {
+     display: inline;
+ }
+
+ .text-right {
+     text-align: right;
+ }

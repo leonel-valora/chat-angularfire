@@ -1,0 +1,19 @@
+<div id="chat">
+    <p id="chat-title">Firestone<span class="text-emphasis">Chat</span></p>
+    <div id="chat-body">
+        <div *ngFor="let chat of chatService.chats"
+            [ngClass]="{'text-right': chatService.usuario.uid == chat.uid}">
+            <div class="msg"  [ngClass]="{ 'msg-sent': chatService.usuario.uid == chat.uid, 'msg-received': chatService.usuario.uid != chat.uid  }" >
+                <p><span class="chat-user">{{chat.nombre}}</span><br/>{{chat.mensaje}}</p>
+            </div>
+        </div>
+    </div>
+    <form id="new-msg" 
+    (ngSubmit)="enviarMensaje(form)"
+    #form="ngForm">
+        <input type="text" id="input-msg" placeholder="Introduce tu mensaje aqui"
+        name="mensaje" 
+        [(ngModel)]="mensaje">
+        <button id="btn-send-msg" type="submit">Enviar</button>
+    </form>
+</div>

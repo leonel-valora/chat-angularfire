@@ -1,0 +1,3 @@
+<app-login *ngIf="!chatService.usuario.uid"></app-login>
+<app-chat *ngIf="chatService.usuario.uid"></app-chat>
+<button *ngIf="chatService.usuario.uid" (click) ="chatService.logout()">Salir</button>
